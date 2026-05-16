@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Trần Phi Hùng - Backend Developer</title>
+    <title>Portfolio | Tran Phi Hung - Backend & AI Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* --- CẤU HÌNH CƠ BẢN --- */
+        /* --- CORE CONFIGURATION --- */
         :root {
-            --primary-color: #0f172a; /* Màu tối (Dark Navy) phù hợp với Backend Dev */
-            --accent-color: #3b82f6;  /* Màu xanh điểm nhấn */
+            --primary-color: #0f172a; /* Sleek Dark Navy for Systems Engineers */
+            --accent-color: #2563eb;  /* Tech Blue Accent */
             --text-dark: #1e293b;
             --text-light: #64748b;
             --bg-light: #f8fafc;
@@ -93,10 +93,10 @@
         }
 
         .hero-content p {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--text-light);
             margin-bottom: 30px;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         .btn {
@@ -158,12 +158,12 @@
         .skills-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            max-width: 800px;
+            gap: 25px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .skill-category h3 { margin-bottom: 10px; font-size: 1.1rem; }
+        .skill-category h3 { margin-bottom: 12px; font-size: 1.2rem; color: var(--primary-color); }
         
         .skills-grid {
             display: flex;
@@ -182,6 +182,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
         
         .skill-tag i { color: var(--accent-color); }
@@ -189,17 +190,17 @@
         /* --- PROJECTS --- */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
         }
 
         .project-card {
             background: var(--white);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #f1f5f9;
+            border: 1px solid #e2e8f0;
             display: flex;
             flex-direction: column;
         }
@@ -213,29 +214,30 @@
             background: var(--primary-color);
             color: white;
             padding: 20px;
-            height: 80px;
+            min-height: 70px;
             display: flex;
             align-items: center;
         }
 
+        .project-header h3 { font-size: 1.15rem; display: flex; align-items: center; gap: 10px; }
+
         .project-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column;}
-        .project-info h3 { font-size: 1.25rem; margin-bottom: 10px; color: var(--text-dark); }
-        .project-desc { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; flex-grow: 1; }
+        .project-desc { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; flex-grow: 1; text-align: justify; }
         
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             margin-bottom: 20px;
         }
 
         .tech-badge {
             font-size: 0.75rem;
-            background: #eff6ff;
-            color: var(--accent-color);
-            padding: 4px 8px;
+            background: #f1f5f9;
+            color: #334155;
+            padding: 4px 10px;
             border-radius: 4px;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         .project-link {
@@ -243,7 +245,7 @@
             margin-top: auto;
         }
         .project-link a {
-            color: var(--primary-color);
+            color: var(--accent-color);
             font-weight: 700;
             font-size: 0.9rem;
         }
@@ -255,24 +257,23 @@
             color: #94a3b8;
             text-align: center;
             padding: 40px 0;
-            margin-top: 0;
         }
         
-        .social-links { margin-bottom: 20px; }
+        .social-links { margin-bottom: 15px; }
         .social-links a {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             margin: 0 15px;
             color: var(--white);
-            transition: opacity 0.3s;
+            transition: color 0.3s;
         }
-        .social-links a:hover { opacity: 0.8; }
+        .social-links a:hover { color: var(--accent-color); }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2.5rem; }
             .about-content { flex-direction: column; text-align: center; }
             .nav-links { display: none; }
-            .about-img img { width: 200px; height: 200px; box-shadow: none; border: 5px solid var(--white);}
+            .about-img img { width: 220px; height: 220px; box-shadow: none; border: 5px solid #e2e8f0;}
         }
     </style>
 </head>
@@ -283,10 +284,10 @@
             <nav>
                 <div class="logo">Hung<span>PhiTran</span></div>
                 <div class="nav-links">
-                    <a href="#about">Giới thiệu</a>
-                    <a href="#skills">Kỹ năng</a>
-                    <a href="#projects">Dự án</a>
-                    <a href="#contact">Liên hệ</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </nav>
         </div>
@@ -294,27 +295,27 @@
 
     <section class="hero">
         <div class="container hero-content">
-            <h1>Xin chào, tôi là<br>Trần Phi Hùng</h1>
-            <p>Backend Developer | Node.js • NestJS • FastAPI</p>
-            <a href="#projects" class="btn">Xem Dự Án Của Tôi</a>
+            <h1>Hello, I am<br>Tran Phi Hung</h1>
+            <p>Backend & AI Engineer | High-Performance Architectures & Distributed Systems</p>
+            <a href="#projects" class="btn">Explore My Projects</a>
         </div>
     </section>
 
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">Về Bản Thân</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://avatars.githubusercontent.com/u/130950996?v=4" alt="Trần Phi Hùng"> 
+                    <img src="https://avatars.githubusercontent.com/u/130950996?v=4" alt="Tran Phi Hung"> 
                 </div>
                 <div class="about-text">
-                    <h3>Xây dựng hệ thống backend mạnh mẽ & tối ưu</h3>
-                    <p>Tôi là một Backend Developer với kinh nghiệm chuyên sâu trong việc xây dựng các ứng dụng web sử dụng <strong>Node.js, NestJS</strong> và <strong>FastAPI</strong>. Tôi thành thạo việc thiết kế và làm việc với đa dạng cơ sở dữ liệu (SQL/NoSQL) cũng như triển khai hệ thống thông qua Docker.</p>
+                    <h3>Systems-Driven Backend & AI Engineer</h3>
+                    <p>I am an Information Technology undergraduate at <strong>PTIT</strong> and a Backend / AI Engineer. I specialize in developing highly concurrent, fault-tolerant service layers using <strong>NestJS, Node.js, FastAPI, and Java MVC</strong>. My expertise covers microservices coordination, asynchronous messaging, performance caching, production-scale polyglot databases, and advanced NLP (Retrieval-Augmented Generation) applications.</p>
                     <br>
-                    <p>Mục tiêu của tôi là tạo ra các giải pháp phần mềm có hiệu suất cao, bảo mật và dễ dàng mở rộng.</p>
+                    <p>With a strict emphasis on Clean Code practices, I consistently incorporate decoupled layered architectures, multi-purpose generic mappers, automated mail service notifications, and robust deployment configurations to guarantee data integrity, absolute reliability, and smooth horizontal scalability.</p>
                     
                     <div class="fun-fact">
-                        <i class="fas fa-coffee"></i> <strong>Fun Fact:</strong> Tôi có thể code liên tục 8 tiếng chỉ với một cốc cà phê!
+                        <i class="fas fa-robot"></i> <strong>Fun Fact:</strong> I maintain a rigid "Chill Guy" philosophy when resolving complex system bottlenecks—whether mitigating intense database race conditions under peak concurrency, optimizing message-queue brokers, or managing automated VPS Linux server deployments.
                     </div>
                 </div>
             </div>
@@ -323,26 +324,41 @@
 
     <section id="skills" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Kỹ Năng Chuyên Môn</h2>
+            <h2 class="section-title">Technical Expertise</h2>
             <div class="skills-container">
                 
                 <div class="skill-category">
-                    <h3>Ngôn ngữ & Frameworks</h3>
+                    <h3>Backend, Frameworks & Messaging</h3>
                     <div class="skills-grid">
-                        <div class="skill-tag"><i class="fab fa-node-js"></i> Node.js</div>
-                        <div class="skill-tag"><i class="fas fa-layer-group"></i> NestJS</div>
+                        <div class="skill-tag"><i class="fab fa-node-js"></i> Node.js & NestJS</div>
                         <div class="skill-tag"><i class="fas fa-bolt"></i> FastAPI (Python)</div>
-                        <div class="skill-tag"><i class="fas fa-code"></i> PUG Template</div>
+                        <div class="skill-tag"><i class="fab fa-java"></i> Java MVC Architecture</div>
+                        <div class="skill-tag"><i class="fas fa-envelope"></i> Mail Services & SMTP Integration</div>
+                        <div class="skill-tag"><i class="fas fa-project-diagram"></i> Microservices & API Gateway</div>
+                        <div class="skill-tag"><i class="fas fa-exchange-alt"></i> RabbitMQ Message Brokering</div>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Database & Tools</h3>
+                    <h3>Artificial Intelligence & NLP</h3>
                     <div class="skills-grid">
-                        <div class="skill-tag"><i class="fas fa-database"></i> SQL Server</div>
-                        <div class="skill-tag"><i class="fas fa-leaf"></i> MongoDB (NoSQL)</div>
-                        <div class="skill-tag"><i class="fab fa-docker"></i> Docker</div>
-                        <div class="skill-tag"><i class="fab fa-git-alt"></i> Git / GitHub</div>
+                        <div class="skill-tag"><i class="fas fa-brain"></i> RAG Pipelines & LLM Orchestration</div>
+                        <div class="skill-tag"><i class="fas fa-server"></i> FAISS Vector Database</div>
+                        <div class="skill-tag"><i class="fas fa-language"></i> Bi-Encoder Fine-Tuning (Kaggle/Colab)</div>
+                        <div class="skill-tag"><i class="fas fa-font"></i> Lexical Semantics (WordNet / NLTK)</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases, DevOps & Hardware Infrastructure</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag"><i class="fas fa-database"></i> PostgreSQL, MySQL & SQL Server (Locks Tuning)</div>
+                        <div class="skill-tag"><i class="fas fa-leaf"></i> MongoDB (NoSQL Document Store)</div>
+                        <div class="skill-tag"><i class="fas fa-bolt"></i> Redis In-Memory Caching & Session Store</div>
+                        <div class="skill-tag"><i class="fab fa-docker"></i> Docker Containerization</div>
+                        <div class="skill-tag"><i class="fas fa-server"></i> VPS Linux Deployment & Railway Cloud</div>
+                        <div class="skill-tag"><i class="fas fa-microchip"></i> C/C++ (ESP32 Firmware & FreeRTOS)</div>
+                        <div class="skill-tag"><i class="fas fa-check-circle"></i> CodeRabbit Automation Workflows</div>
                     </div>
                 </div>
 
@@ -352,43 +368,76 @@
 
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Dự Án Tiêu Biểu</h2>
+            <h2 class="section-title">Research & Development Projects</h2>
             <div class="projects-grid">
                 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-car"></i> AutoPart Management</h3>
+                        <h3><i class="fas fa-gavel"></i> Legal Information Retrieval</h3>
                     </div>
                     <div class="project-info">
-                        <p class="project-desc">Hệ thống thương mại điện tử chuyên cung cấp phụ tùng ô tô. Bao gồm trang khách hàng và trang Admin Dashboard cho phép quản lý toàn bộ sản phẩm và đơn hàng trên hệ thống.</p>
-                        
+                        <p class="project-desc">An intelligent Vietnamese legal knowledge-retrieval platform. Conducted end-to-end training and GPU fine-tuning of deep Bi-Encoder models on Kaggle. Integrated high-density FAISS semantic vector databases utilizing the `large-vi-legal-queries` dataset to optimize deep retrieval accuracy.</p>
                         <div class="tech-stack">
-                            <span class="tech-badge">Node.js</span>
-                            <span class="tech-badge">SQL Server</span>
-                            <span class="tech-badge">PUG</span>
-                        </div>
-
-                        <div class="project-link">
-                            <a href="#">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+                            <span class="tech-badge">FastAPI</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">RAG</span>
+                            <span class="tech-badge">FAISS</span>
+                            <span class="tech-badge">Bi-Encoder</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3><i class="fas fa-home"></i> HomeCare</h3>
+                        <h3><i class="fas fa-hotel"></i> BigKey - OTA System</h3>
                     </div>
                     <div class="project-info">
-                        <p class="project-desc">Nền tảng kết nối và cho thuê người giúp việc. Phát triển Backend API RESTful dùng chung cho cả Website quản trị và Mobile App của người dùng.</p>
-                        
+                        <p class="project-desc">An enterprise-scale Online Travel Agency infrastructure. Developed robust backend modules managing property inventories, multi-party escrow transactions, automated transaction mail service status alerts, Redis distributed caching, and strict pessimistic/optimistic database lock schemes to eliminate race conditions under intense concurrency constraints.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">NestJS</span>
+                            <span class="tech-badge">Microservices</span>
+                            <span class="tech-badge">Redis</span>
+                            <span class="tech-badge">DB Locking</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                        </div>
+                        <div class="project-link">
+                            <a href="https://github.com/Bigkey4BookingProjects" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-heartbeat"></i> PulseCare (IoT)</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-desc">A real-time health telemetry wearable monitoring SpO2 and heart rates. Wrote low-level firmware on dual-core ESP32 chipsets running FreeRTOS to manage asynchronous sensor polling tasks (MAX30102) and seamless display rendering pipelines (ST7735) concurrently without blocking.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">C/C++</span>
+                            <span class="tech-badge">ESP32</span>
+                            <span class="tech-badge">FreeRTOS</span>
+                            <span class="tech-badge">Hardware</span>
+                        </div>
+                        <div class="project-link">
+                            <a href="https://github.com/PulseCare-Organization" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-tools"></i> AutoPart Management</h3>
+                    </div>
+                    <div class="project-info">
+                        <p class="project-desc">An e-commerce B2B application designed to streamline automotive spare parts management. Engineered comprehensive warehouse distribution pipelines, deep relational database supply-tracking structures packaged inside containers, and custom admin tracking dashboards deployed on secure Linux VPS infrastructure.</p>
                         <div class="tech-stack">
                             <span class="tech-badge">Node.js</span>
-                            <span class="tech-badge">MongoDB</span>
-                            <span class="tech-badge">API</span>
+                            <span class="tech-badge">SQL Server</span>
+                            <span class="tech-badge">VPS Deployment</span>
+                            <span class="tech-badge">Docker</span>
                         </div>
-
                         <div class="project-link">
-                            <a href="https://github.com/hungphitran/Homecare" target="_blank">Xem trên GitHub <i class="fab fa-github"></i></a>
+                            <a href="https://github.com/1O8O2/AutoParts-NodeJs" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -397,21 +446,21 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section bg-light">
         <div class="container" style="text-align: center;">
-            <h2 class="section-title">Liên Hệ</h2>
-            <p style="margin-bottom: 30px; color: var(--text-light);">Bạn có một dự án thú vị? Hãy cùng thảo luận.</p>
+            <h2 class="section-title">Connect With Me</h2>
+            <p style="margin-bottom: 40px; color: var(--text-light); font-size: 1.1rem;">Are you looking for a Backend/AI Engineering Intern or interested in system development collaborations?</p>
             
-            <div class="social-links" style="margin-bottom: 0;">
-                <a href="mailto:email@example.com" style="color: var(--primary-color);"><i class="fas fa-envelope"></i> Email</a>
-                <a href="#" style="color: var(--primary-color);"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <div class="social-links">
+                <a href="mailto:hungphitran.22@gmail.com" style="color: var(--primary-color);"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/hungphitran-backenddev" target="_blank" style="color: var(--primary-color);"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="https://github.com/hungphitran" target="_blank" style="color: var(--primary-color);"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Trần Phi Hùng. Backend Developer.</p>
+        <p>&copy; 2026 Tran Phi Hung. Engineered with Clean Architecture & Passion.</p>
     </footer>
 
 </body>
